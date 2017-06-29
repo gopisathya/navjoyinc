@@ -68,3 +68,10 @@ $scope.deselect = function(){
 });
 
 
+app.directive("contact-title",function(){
+  return{
+    restrict: 'A',
+    template: '<strong>Welcome Direrctives</strong>'
+
+  };
+});
