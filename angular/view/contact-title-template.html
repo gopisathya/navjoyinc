@@ -22,10 +22,10 @@
   <td><button class="btn btn-primary" ng-click="addcontact(contact)" ng-disabled="!contact">Add Contact</button></td>
 
 
-  <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;  <button class="btn btn-info" ng-click="deselect()">clear</button></td>
+  <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">clear</button></td>
 
   </tr>
-      <tr ng-repeat="contact in contact">
+      <tr ng-repeat="contact in contactList">
          <td>{{contact.name}}</td>
          <td>{{contact.email}}</td>
          <td>{{contact.number}}</td>

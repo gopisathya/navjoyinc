@@ -44,10 +44,10 @@ app.delete('/removecontact/:id', function(req, res){
 
 app.get('/editcontact/:id', function(req, res){
 	console.log("enter"+JSON.stringify(req.params.id));
-	var id = req.params.id;
-	console.log('i recived a post request'+JSON.stringify(req.body)); 
- 	db.contactlist.findOne({_id:mongojs.ObjectId(id)}, function(err, docs){
-    res.json(docs);
+	var id = mongojs.ObjectId(req.params.id);
+	console.log('i recived a post request'+JSON.stringify(id)); 
+ 	db.contactlist.findOne({_id:id}, function(err, doc){
+    res.json(doc);
  	})
 })
 

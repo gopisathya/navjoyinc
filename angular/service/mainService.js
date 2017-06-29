@@ -12,6 +12,16 @@ return{
            return update;
        },
 
+ refresh:function(data)
+       {
+        // alert(JSON.stringify(data));
+	       	var update=$http.get('/contactlistdata/',data).then(function(response)
+	       	{
+                return response;
+	       	});           
+           return update;
+       },
+
 
 
 // remove
